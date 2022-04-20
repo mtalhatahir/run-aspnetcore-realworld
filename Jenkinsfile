@@ -1,8 +1,8 @@
 pipeline{
     agent any
-    tools {
+    /*tools {
         dotnet: 'dotnetjenkins'
-    }
+    }*/
     stages{
         stage('git-pull')
         {
@@ -10,6 +10,7 @@ pipeline{
                 git credentialsId: 'GitHubCreds', url: 'https://github.com/mtalhatahir/run-aspnetcore-realworld.git'
             }
         }
+        /*
         stage('Restore-Project')
         {
             steps{
@@ -21,7 +22,7 @@ pipeline{
             steps{
                 bat 'dotnet build'
             }
-        }
+        }*/
         stage('Deploy')
         {
             steps{
