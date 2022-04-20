@@ -27,7 +27,7 @@ pipeline{
         {
             steps{
                 sshagent(['laptop-perl1b68']) {
-                sh '''ssh -tt -o StrictHostKeyChecking=no talha@192.168.0.100 "dir"
+                sh '''ssh -tt -o StrictHostKeyChecking=no laptop-perl1b68\talha@192.168.0.100 "dir"
                 
                 '''
                 }
