@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools {
-        msbuild: 'dotnetjenkins'
+        dotnet: 'dotnetjenkins'
     }
     stages{
         stage('git-pull')
