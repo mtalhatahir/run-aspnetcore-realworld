@@ -26,7 +26,7 @@ pipeline{
         stage('Deploy')
         {
             steps{
-                sshagent(['laptop-perl1b68']) {
+                sshagent(['talha']) {
                 sh '''ssh -tt -o StrictHostKeyChecking=no talha@192.168.0.104
                 
                 '''
